@@ -1,2 +1,0 @@
-weblogic-security-provider-mvn
-==============================
