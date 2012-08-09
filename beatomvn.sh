@@ -1,4 +1,6 @@
 #!/bin/bash
+#classpathdep=unzip -q -c weblogic.jar META-INF/MANIFEST.MF | sed ':a;N;$!ba;s/\n //g'|grep Class-Path|tr ' ' '\n'
+#unzip -q -c weblogic.jar META-INF/MANIFEST.MF | sed ':a;N;$!ba;s/\n //g'|tr ' ' '\n'|grep modules
 if [ ! -d $1/modules ] || [ ! -f $1/wlserver_10.3/server/lib/weblogic.jar ]
 then
   echo "Usage: $0 <BEA_HOME>"
