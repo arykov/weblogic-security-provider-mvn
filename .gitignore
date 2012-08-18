@@ -6,3 +6,4 @@
 target
 *.log
 *.class
+src/main/lib
