@@ -1,6 +1,8 @@
+*.bak
+.settings
+.classpath
+.project
+.springBeans
+target
+*.log
 *.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
