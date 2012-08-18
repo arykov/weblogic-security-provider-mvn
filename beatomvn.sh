@@ -141,22 +141,12 @@ fi
 
 
 #load all the jars you can find
-#for f in $(find ${1}/modules/. -name "*.jar")
-#do
-#  loadJar ${f}
-#done
-#
-#for f in $(find ${1}/wlserver_10.3/. -name "*.jar")
-#do
-#  loadJar ${f}
-#done
-#
-
-for f in $(find ${1}/. -name "com.oracle.oraclepki_1.0.0.0.jar")
+for f in $(find ${1}/modules/. -name "*.jar")
 do
   loadJar ${f}
 done
-for f in $(find ${1}/. -name "com.oracle.weblogic.rac.ucp_1.1.0.0.jar")
+
+for f in $(find ${1}/wlserver_10.3/. -name "*.jar")
 do
   loadJar ${f}
 done
