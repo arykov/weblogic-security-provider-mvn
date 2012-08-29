@@ -46,7 +46,7 @@
 								<property name="mbean_gen_dir" value="${mbean.generated.source.dir}" />
 								<property name="mbean_out_dir" value="${project.build.directory}/mbean-out" />
 								<property name="mjf_jar"
-									value="${project.build.directory}/${project.build.finalName}.jar" />
+									value="${project.build.directory}/${project.build.finalName}-weblogic.jar" />
 
 								<!-- macro for MBeanMaker to generate intermediate files -->
 								<macrodef name="WebLogicMBeanMakerMDF">
