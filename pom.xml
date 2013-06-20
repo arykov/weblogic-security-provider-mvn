@@ -177,12 +177,14 @@
 			<groupId>com.bea.weblogic1036</groupId>
 			<artifactId>weblogic.server.modules_10.3.6.0</artifactId>
 			<version>1036</version>
+			<scope>provided</scope>
 
 		</dependency>
 		<dependency>
 			<groupId>com.bea.weblogic1036</groupId>
 			<artifactId>weblogic</artifactId>
 			<version>1036</version>
+			<scope>provided</scope>
 
 		</dependency>
 		<dependency>
@@ -196,11 +198,13 @@
 			<groupId>org.apache.ant</groupId>
 			<artifactId>ant-launcher</artifactId>
 			<version>1.7.1</version>
+			<scope>provided</scope>
 
 		</dependency>
 		<dependency>
 			<groupId>org.apache.ant</groupId>
 			<artifactId>ant</artifactId>
+			<scope>provided</scope>
 			<version>1.7.1</version>
 
 		</dependency>
