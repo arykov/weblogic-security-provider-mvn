@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!DOCTYPE MBeanType SYSTEM "commo.dtd">
+<MBeanType
+ Name          = "SimplifiedADAuthenticatior" 
+ DisplayName   = "SimplifiedADAuthenticatior"
+ Package       = "com.ryaltech.security.ad"
+ Extends       = "weblogic.management.security.authentication.Authenticator"
+ PersistPolicy = "OnUpdate"
+>
+ <MBeanAttribute
+  Name      = "ProviderClassName"
+  Type      = "java.lang.String"
+  Writeable = "false"
+  Default   = "&quot;com.ryaltech.security.ad.ADAuthenticationProviderImpl&quot;"
+ />
+
+ <MBeanAttribute
+  Name      = "Description"
+  Type      = "java.lang.String"
+  Writeable = "false"
+  Default   = "&quot;Basic authentication against AD, that relies on one lookup to establish user DN and group membership(memberof) and one bind to validate passwo.&quot;"
+ />
+
+ <MBeanAttribute
+  Name      = "Version"
+  Type      = "java.lang.String"
+  Writeable = "false"
+  Default   = "&quot;1.0&quot;"
+ />
+
+ <MBeanAttribute
+  Name          = "Verbose"
+  Type          = "java.lang.Boolean"
+  Writeable     = "true"
+  InterfaceType = "boolean"
+  IsIs          = "true"
+  Default       = "Boolean.FALSE"
+  Description   = "Turn on this flag will obtains more debug information for this provider. The precondition is that Server's Logger Severity Threshold must be DEBUG level first, otherwise no any effect even it's on"
+ />
+ <MBeanAttribute
+   Name          = "AdHost"
+   Type          = "java.lang.String"
+   Writeable     = "true"      
+   Description   = "The host name or IP address of the AD server."
+  />
+  
+  <MBeanAttribute
+     Name          = "AdPort"
+     Type          = "java.lang.Integer"
+     Writeable     = "true"      
+     Default       = "new Integer(3268)"
+     Description   = "The port number on which the AD server is listening."
+  />
+  <MBeanAttribute
+    Name          = "SslEnabled"
+    Type          = "java.lang.Boolean"
+    Writeable     = "true"
+    InterfaceType = "boolean"
+    IsIs          = "true"
+    Default       = "Boolean.FALSE"
+    Description   = "pecifies whether the SSL protocol should be used when connecting to the AD server."
+ />
+   <MBeanAttribute
+          Name          = "Principal"
+          Type          = "java.lang.String"
+          Writeable     = "true"                
+          Description   = "The Distinguished Name (DN) of the AD user that WebLogic Server should use to connect to the AD server."
+    />
+    <MBeanAttribute
+          Name          = "Credential"
+          Type          = "java.lang.String"
+          Writeable     = "true"                
+          Encrypted     = "true"
+          Description   = "The credential (usually a password) used to connect to the AD server."
+    />
+  
+  <MBeanAttribute
+       Name          = "UserBaseDn"
+       Type          = "java.lang.String"
+       Writeable     = "true"             
+       Description   = "The base distinguished name (DN) of the tree in the AD directory that contains users."
+  />
+  <MBeanAttribute
+       Name          = "PoolSize"
+       Type          = "java.lang.Integer"
+       Writeable     = "true"      
+       Default       = "new Integer(6)"
+       Description   = "The AD connection pool size."
+  />
+</MBeanType>
